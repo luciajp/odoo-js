@@ -1,14 +1,13 @@
 odoo.define('widgets.chatter', (require) => {
 
-	
-	const registry = require('web.field_registry');
 	const Widget = require('web.AbstractField');
-
+	const registry = require('web.field_registry');
+    
 	const FieldForShare = Widget.extend({
-		xmlDependencies: ['/widgets/static-src/xml/field.xml'],
+		//xmlDependencies: ['/widgets/static-src/xml/field.xml'],
 		template: 'widgets.share_button',
 		events: {
-			'click .js_reset_field': 'resetShareCount'
+			'click .js_reset_field': 'resetShareCount',
 		},
 		renderElement (){
 			this.newValue = Intl.NumberFormat().format(this.value);
@@ -16,7 +15,7 @@ odoo.define('widgets.chatter', (require) => {
 
 		},
 		async resetShareCount(ev){
-			await this.setValue('0');
+			await this._setValue('0');
 			this.renderElement();
 		},
 		isSet(){
@@ -24,6 +23,7 @@ odoo.define('widgets.chatter', (require) => {
 		}
 
 	});
+	console.warn('Dentro de field.js');
 
 	registry.add('share_count_widget', FieldForShare);
 });

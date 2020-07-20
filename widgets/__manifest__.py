@@ -17,11 +17,8 @@
     'demo': [],
     'data': [
         'views/product.xml',
-        'views/assets.xml'
-        ],
-    'qweb': [
-        'static-src/xml/*.xml',
-    ],   
+        'views/assets.xml',        
+    ],  
     'development_status': 'Beta',
     'maintainers': [
         'Lucía Jiménez',

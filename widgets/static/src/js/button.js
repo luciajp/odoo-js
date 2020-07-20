@@ -9,7 +9,6 @@ odoo.define('widgets.button', (require) => {
 		events: {
 			'click button': 'clickEvent',
 		},
-
 		start (){
 			this._super(...arguments);
 			new ClipboardJS(this.el, {
@@ -18,15 +17,17 @@ odoo.define('widgets.button', (require) => {
 				},
 			});
 		},
-		async clickEvent () {
+		async clickEvent (ev) {
 			await this._rpc({
-				route: '/widgets/share_count',
-				params: { product_id: this.el.dataset.id }
+				route: '/update/share/count',
+				params: { product_id: this.el.dataset.id },
 			});
 			Dialog.alert(
-				this,
-				'Has copiado la URL de tu producto',{ title: '¡Exito!' });
-
+				this, 'Has copiado la URL de tu producto', 
+				{ 
+					title: '¡Exito!' 
+				}
+			);
 		},
 
 	});
