@@ -1,0 +1,44 @@
+
+$green1: rgba(110,200,155,1);
+
+.green-box {
+    box-shadow: 0px 0px 5px 4px $green1;
+}
+
+.product .fa-gratipay {
+    color: $green1;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    margin: .25rem;
+}
+
+.shipping{
+
+    ul {
+        text-align: left;
+        padding: 0 50px;
+
+        li {
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: translateX ease-in; 
+
+            &:hover{
+                transform: translateX(3px);
+            }
+
+        }
+
+    }
+
+}
+
+.checkout {
+    .content {
+        margin: 24px 12px !important;
+    }
+    .fa-credit-card-alt, .fa-truck {
+        margin-left: 8px !important;
+    }
+}
