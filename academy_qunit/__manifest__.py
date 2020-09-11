@@ -1,23 +1,22 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Widgets for Point of Sale',
-    'summary': 'Widgets for Point of Sale',
+    'name': 'Widgets con QUnit',
+    'summary': 'QUnit',
     'version': '1.0',
-    'category': 'Point of Sale',
-    'author': 'Quadit, ',
+    'category': 'Website',
+    'author': 'Quadit',
     'website': 'https://www.quadit.mx',
     'license': 'LGPL-3',
     'depends': [
-        'sale', 
-        'point_of_sale',
-        'product'
+        'web', 
+        'website',         
     ],
     'sequence': 1,
     'demo': [],
     'data': [
-        'views/assets.xml',
+        'views/assets.xml', 
         'views/product.xml',
-        '/static/src/xml/*'        
+               
     ],  
     'development_status': 'Beta',
     'maintainers': [

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template_popups" xml:space="preserve">
 	<t t-name="widgets02.carrier.popup">
         <div role="dialog" class="modal-dialog">
@@ -21,3 +21,4 @@
             </div>
         </div>
     </t>
+</templates>  -->

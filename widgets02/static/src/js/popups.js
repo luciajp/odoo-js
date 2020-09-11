@@ -1,28 +1,28 @@
- odoo.define('widgets02.popups', (require) => {
+//odoo.define('widgets02.popups', (require) => {
 
- 	const { load_models } = require('point_of_sale.models');
+ 	// const { load_models } = require('point_of_sale.models');
 
-     load_models([{
-     	model: 'delivery.carrier',
-     	fields: ['name'],
-     	loaded: (self, carriers) => self.db.carriers = carriers,
+  //    load_models([{
+  //    	model: 'delivery.carrier',
+  //    	fields: ['name'],
+  //    	loaded: (self, carriers) => self.db.carriers = carriers,
 
-     	}]); 
+  //    	}]); 
 
-     const PopupWidget = require('point_of_sale.popups');
+  //    const PopupWidget = require('point_of_sale.popups');
 
-     const CarrierPopupWidget = PopupWidget.extend({
-     	template: 'widgets02.carrier.popup',
-     	events: {
-     		'click li': 'setCarrier',
-     		'click .cancel': 'click_cancel',
-     	},
-     	setCarrier(ev){
-     		const order = this.pos.get_order();
-     		order.carrier_id = ev.currentTarget.dataset.id;
-     		this.clic_confirm();
-     	},
-     });
+  //    const CarrierPopupWidget = PopupWidget.extend({
+  //    	template: 'widgets02.carrier.popup',
+  //    	events: {
+  //    		'click li': 'setCarrier',
+  //    		'click .cancel': 'click_cancel',
+  //    	},
+  //    	setCarrier(ev){
+  //    		const order = this.pos.get_order();
+  //    		order.carrier_id = ev.currentTarget.dataset.id;
+  //    		this.clic_confirm();
+  //    	},
+  //    });
 
 //     const gui = require('point_of_sale.gui');
 //     gui.define_popup({ name: 'delivery', widget: CarrierPopupWidget});
